@@ -20,11 +20,17 @@
 	</bean>
 	
 	<bean id="myCoach" 
-		class="com.bibleit.springdemo.TrackCoach">
-			
+		class="com.bibleit.springdemo.TrackCoach">			
 			<!-- setup constructor injection -->
 			<constructor-arg
 				ref="myFortune" />
+	</bean>
+	
+	<bean
+		id="myCricketCoach"
+		class="com.bibleit.springdemo.CricketCoach">
+		<!-- Setup the setter injection -->
+		<property name="fortuneService" ref="myFortune" />
 	</bean>
 
 </beans>

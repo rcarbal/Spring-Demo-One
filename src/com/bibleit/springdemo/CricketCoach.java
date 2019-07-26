@@ -2,9 +2,7 @@ package com.bibleit.springdemo;
 
 public class CricketCoach implements Coach {
 	
-	private FortuneService fortuneService;
-
-	
+	private FortuneService fortuneService;	
 	
 	public CricketCoach() {
 		System.out.println("Cricket: inside no-arg constructor");
