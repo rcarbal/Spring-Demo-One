@@ -1,6 +1,16 @@
 package com.bibleit.springdemo;
 
 public class TrackCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public TrackCoach() {
+		
+	}
+
+	public TrackCoach(FortuneService fortunService) {
+		this.fortuneService = fortunService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -9,8 +19,7 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyForutne() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Just do it: " + fortuneService.getFortune();
 	}
 
 }

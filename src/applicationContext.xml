@@ -20,7 +20,7 @@
 	</bean>
 	
 	<bean id="myCoach" 
-		class="com.bibleit.springdemo.SoccerCoach">
+		class="com.bibleit.springdemo.TrackCoach">
 			
 			<!-- setup constructor injection -->
 			<constructor-arg

@@ -11,6 +11,9 @@ public class HelloSpringApp {
 		Coach theCoach = context.getBean("myCoach", Coach.class);
 		// call methods
 		System.out.println(theCoach.getDailyWorkout());
+		
+		// Lets call the new method for fortunes
+		System.out.println(theCoach.getDailyForutne());
 		// close context
 		context.close();
 	}

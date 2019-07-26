@@ -2,6 +2,12 @@ package com.bibleit.springdemo;
 
 public class BaseballCoach implements Coach {
 	
+	private FortuneService fortuneService;
+	
+	public BaseballCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		return "spend 30 minutes on batting cage";
@@ -9,8 +15,8 @@ public class BaseballCoach implements Coach {
 
 	@Override
 	public String getDailyForutne() {
-		// TODO Auto-generated method stub
-		return null;
+		// use the fortuneService to give the fortune
+		return fortuneService.getFortune();
 	}
 
 }
