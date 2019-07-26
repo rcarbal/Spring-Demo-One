@@ -7,4 +7,10 @@ public class BaseballCoach implements Coach {
 		return "spend 30 minutes on batting cage";
 	}
 
+	@Override
+	public String getDailyForutne() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
