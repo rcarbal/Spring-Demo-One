@@ -24,7 +24,8 @@
 	
 	<bean id="myCoach" 
 		class="com.bibleit.springdemo.TrackCoach"
-		scope="prototype">			
+		init-method="doMyStartupStuff"
+		destroy-method="doMyDestroyStuff">			
 			<!-- setup constructor injection -->
 			<constructor-arg
 				ref="myFortune" />

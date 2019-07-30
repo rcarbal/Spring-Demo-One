@@ -13,8 +13,7 @@
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
-	<!-- Load the properties file: sports.properties -->
-	<context:property-placeholder location="classpath:sports.properties"/>
+	
 	<!-- Define the Dependency -->
 	<bean 
 		id="myFortune"
@@ -26,19 +25,7 @@
 			<!-- setup constructor injection -->
 			<constructor-arg
 				ref="myFortune" />
-	</bean>
-	
-	<bean
-		id="myCricketCoach"
-		class="com.bibleit.springdemo.CricketCoach">
-		
-		<!-- Setup the setter injection -->
-		<property name="fortuneService" ref="myFortune" />
-		
-		<!-- Inject literal values -->
-		<property name="emailAddress" value="${foo.email}" />
-		<property name="team" value="${foo.team}" />
-	</bean>
+	</bean> 
 
 </beans>
 
